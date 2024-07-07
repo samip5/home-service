@@ -5,6 +5,7 @@ Wants=network-online.target
 
 [Container]
 AddCapability=NET_ADMIN
+AddCapability=NET_RAW
 ContainerName=bind
 Environment=TZ=Europe/Helsinki
 Image=registry.skysolutions.fi/docker.io/nicolaka/netshoot
