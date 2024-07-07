@@ -1,0 +1,23 @@
+[Unit]
+Description=bind
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+AddCapability=NET_BIND_SERVICE
+ContainerName=bind
+Environment=TZ=Europe/Helsinki
+Image=registry.skysolutions.fi/library/bind:11052024
+IP=172.16.9.3
+IP6=fdbc:baa4:65a9:d::3
+Network=containernet
+Volume=./bind/config:/etc/bind
+Volume=./bind/lib:/var/lib/bind
+Volume=./bind/logs:/var/log
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target

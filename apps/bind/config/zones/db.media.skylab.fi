@@ -1,0 +1,77 @@
+$ORIGIN .
+$TTL 3600	; 1 hour
+media.skylab.fi		IN SOA	gateway.skylab.fi. gateway.skylab.fi. (
+				1695577237 ; serial
+				7200       ; refresh (2 hours)
+				3600       ; retry (1 hour)
+				1209600    ; expire (2 weeks)
+				3600       ; minimum (1 hour)
+				)
+			NS	gateway.skylab.fi.
+$ORIGIN media.skylab.fi.
+$TTL 0	; 0 seconds
+k8s-media.a-bazarr	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/bazarr"
+k8s-media.a-hubble	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/kube-system/hubble-ui"
+k8s-media.a-jelly	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/jellyfin"
+k8s-media.a-qb		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/qbit"
+k8s-media.a-qbittorrent	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/qbittorrent"
+k8s-media.a-radarr	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/radarr"
+k8s-media.a-sonarr	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/sonarr"
+k8s-media.a-tautulli	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/tautulli"
+k8s-media.a-tdarr	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/tdarr"
+k8s-media.aaaa-bazarr	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/bazarr"
+k8s-media.aaaa-hubble	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/kube-system/hubble-ui"
+k8s-media.aaaa-jelly	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/jellyfin"
+k8s-media.aaaa-qb	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/qbit"
+k8s-media.aaaa-qbittorrent TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/qbittorrent"
+k8s-media.aaaa-radarr	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/radarr"
+k8s-media.aaaa-sonarr	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/sonarr"
+k8s-media.aaaa-tautulli	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/tautulli"
+k8s-media.aaaa-tdarr	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/tdarr"
+bazarr			A	10.41.69.80
+			AAAA	2001:14ba:16fd:962d::443
+$ORIGIN bazarr.media.skylab.fi.
+k8s-media		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/bazarr"
+$ORIGIN media.skylab.fi.
+$TTL 3600	; 1 hour
+gateway			A	192.168.2.1
+$TTL 0	; 0 seconds
+hubble			A	10.41.69.80
+			AAAA	2001:14ba:16fd:962d::443
+$ORIGIN hubble.media.skylab.fi.
+k8s-media		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/kube-system/hubble-ui"
+$ORIGIN media.skylab.fi.
+jelly			A	10.41.69.80
+			AAAA	2001:14ba:16fd:962d::443
+$ORIGIN jelly.media.skylab.fi.
+k8s-media		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/jellyfin"
+$ORIGIN media.skylab.fi.
+qb			A	10.41.69.80
+			AAAA	2001:14ba:16fd:962d::443
+$ORIGIN qb.media.skylab.fi.
+k8s-media		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/qbit"
+$ORIGIN media.skylab.fi.
+qbittorrent		A	10.41.69.80
+			AAAA	2001:14ba:16fd:962d::443
+$ORIGIN qbittorrent.media.skylab.fi.
+k8s-media		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/qbittorrent"
+$ORIGIN media.skylab.fi.
+radarr			A	10.41.69.80
+			AAAA	2001:14ba:16fd:962d::443
+$ORIGIN radarr.media.skylab.fi.
+k8s-media		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/radarr"
+$ORIGIN media.skylab.fi.
+sonarr			A	10.41.69.80
+			AAAA	2001:14ba:16fd:962d::443
+$ORIGIN sonarr.media.skylab.fi.
+k8s-media		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/sonarr"
+$ORIGIN media.skylab.fi.
+tautulli		A	10.41.69.80
+			AAAA	2001:14ba:16fd:962d::443
+$ORIGIN tautulli.media.skylab.fi.
+k8s-media		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/tautulli"
+$ORIGIN media.skylab.fi.
+tdarr			A	10.41.69.80
+			AAAA	2001:14ba:16fd:962d::443
+$ORIGIN tdarr.media.skylab.fi.
+k8s-media		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/tdarr"
