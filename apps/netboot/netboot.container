@@ -1,0 +1,21 @@
+[Unit]
+Description=netboot
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+AddCapability=NET_BIND_SERVICE
+ContainerName=netboot
+Environment=TZ=Europe/Helsinki
+Image=ghcr.io/netbootxyz/netbootxyz:0.7.1-nbxyz1
+IP=172.16.9.15
+IP6=fdbc:baa4:65a9:d::15
+Network=containernet
+Volume=./netboot/config/:/config
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target

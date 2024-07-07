@@ -1,0 +1,25 @@
+[Unit]
+Description=unifi
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+AddCapability=NET_BIND_SERVICE
+ContainerName=unifi
+Environment=TZ=Europe/Helsinki
+Environment=RUNAS_UID0=false
+Environment=UNIFI_GID=999
+Environment=UNIFI_STDOUT=true
+Environment=UNIFI_UID=999
+Image=ghcr.io/jacobalberty/unifi-docker:v7.5.174
+IP=172.16.9.10
+IP6=fdbc:baa4:65a9:d::10
+Network=containernet
+Volume=./unifi/config:/unifi
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target

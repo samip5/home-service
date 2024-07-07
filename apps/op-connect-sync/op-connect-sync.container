@@ -1,0 +1,20 @@
+[Unit]
+Description=op-connect-sync
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+ContainerName=op-connect-sync
+Environment=TZ=Europe/Helsinki
+Image=registry.skysolutions.fi/docker.io/1password/connect-sync:latest
+IP=172.16.9.12
+Network=containernet
+Volume=../op/creds/1password-credentials.json:/home/opuser/.op/1password-credentials.json
+Volume=op-data:/home/opuser/.op/data
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target
