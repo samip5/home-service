@@ -10,7 +10,9 @@ Environment=TZ=Europe/Helsinki
 Image=registry.skysolutions.fi/library/bind:11052024
 IP=172.16.9.3
 IP6=fdbc:baa4:65a9:d::3
+User=bind
 Network=containernet
+#Exec=sleep infinity
 Volume=./bind/config:/etc/bind
 Volume=./bind/lib:/var/lib/bind
 Volume=./bind/logs:/var/log
