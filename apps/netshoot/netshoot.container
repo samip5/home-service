@@ -1,0 +1,20 @@
+[Unit]
+Description=netshoot
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+AddCapability=NET_ADMIN
+ContainerName=bind
+Environment=TZ=Europe/Helsinki
+Image=registry.skysolutions.fi/docker.io/nicolaka/netshoot
+IP=172.16.9.99
+IP6=fdbc:baa4:65a9:d::99
+Network=containernet
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target
