@@ -1,0 +1,203 @@
+$ORIGIN .
+$TTL 3600	; 1 hour
+skylab.fi		IN SOA	gateway.skylab.fi. gateway.skylab.fi. (
+				1715133277 ; serial
+				7200       ; refresh (2 hours)
+				3600       ; retry (1 hour)
+				1209600    ; expire (2 weeks)
+				3600       ; minimum (1 hour)
+				)
+			NS	gateway.skylab.fi.
+$TTL 0	; 0 seconds
+			A	192.168.10.3
+$ORIGIN skylab.fi.
+k8s-nebula.a-alerts	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/monitoring/prom-alertmanager"
+k8s-nebula.a-autobrr	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/autobrr"
+k8s-nebula.a-blackbox-exporter TXT "heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/monitoring/blackbox-exporter"
+k8s-nebula.a-console-s3-genpi TXT "heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/networking/genpi-minio-int"
+k8s-nebula.a-dh		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/networking/dh-int"
+k8s-nebula.a-esph	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/home/esphome"
+k8s-nebula.a-hass	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/home/assistant-internal"
+k8s-nebula.a-hass-code	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/home/assistant-internal-code"
+k8s-nebula.a-hubble	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/kube-system/hubble-ui"
+k8s-nebula.a-id		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/security/authentik-int"
+k8s-nebula.a-join	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/wizarr-int"
+k8s-nebula.a-kromgo	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/monitoring/kromgo-int"
+k8s-nebula.a-ledger	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/finance/paisa"
+k8s-nebula.a-links	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/collab/littlelink-int"
+k8s-nebula.a-linkward	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/linkwarden-int"
+k8s-nebula.a-maintainerr TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/maintainerr"
+k8s-nebula.a-matrix	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/comms/matrix-synapse-int"
+k8s-nebula.a-paperless	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/paperless"
+k8s-nebula.a-pgadmin	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/databases/pgadmin"
+k8s-nebula.a-photos	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/immich-main"
+k8s-nebula.a-phpmyadmin	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/databases/phpmyadmin"
+k8s-nebula.a-prom	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/monitoring/prom-prometheus"
+k8s-nebula.a-protu-staging TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/protu/protu-staging-wp-main"
+k8s-nebula.a-prowlarr	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/prowlarr-internal"
+k8s-nebula.a-requests	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/jellyseerr-internal"
+k8s-nebula.a-rook	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/rook-ceph/rook-ceph-dashboard"
+k8s-nebula.a-scrutiny	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/monitoring/scrutiny"
+k8s-nebula.a-syncthing	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/syncthing"
+k8s-nebula.a-theme-park	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/theme-park-internal"
+k8s-nebula.a-tv		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/tvheadend-int"
+k8s-nebula.a-unimus	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/networking/unimus"
+k8s-nebula.a-who	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/networking/whoami-int"
+k8s-nebula.a-z		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/zipline-internal"
+k8s-nebula.a-z2m	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/home/zigbee2mqtt"
+alerts			A	192.168.10.3
+$ORIGIN alerts.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/monitoring/prom-alertmanager"
+$ORIGIN skylab.fi.
+autobrr			A	192.168.10.3
+$ORIGIN autobrr.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/autobrr"
+$ORIGIN skylab.fi.
+blackbox-exporter	A	192.168.10.3
+$ORIGIN blackbox-exporter.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/monitoring/blackbox-exporter"
+$ORIGIN skylab.fi.
+k8s-nebula.cname-ingress-cf TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=crd/networking/cloudflared"
+k8s-nebula.cname-sso	TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=crd/networking/sso-skylab"
+console-s3-genpi	A	192.168.10.3
+$ORIGIN console-s3-genpi.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/networking/genpi-minio-int"
+$ORIGIN skylab.fi.
+dh			A	192.168.10.3
+$ORIGIN dh.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/networking/dh-int"
+$ORIGIN skylab.fi.
+esph			A	192.168.10.3
+$ORIGIN esph.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/home/esphome"
+$ORIGIN skylab.fi.
+$TTL 3600	; 1 hour
+gateway			A	192.168.2.1
+$TTL 0	; 0 seconds
+hass			A	192.168.10.3
+$ORIGIN hass.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/home/assistant-internal"
+$ORIGIN skylab.fi.
+hass-code		A	192.168.10.3
+$ORIGIN hass-code.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/home/assistant-internal-code"
+$ORIGIN skylab.fi.
+hubble			A	192.168.10.3
+$ORIGIN hubble.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/kube-system/hubble-ui"
+$ORIGIN skylab.fi.
+id			A	192.168.10.3
+$ORIGIN id.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/security/authentik-int"
+$ORIGIN skylab.fi.
+ingress-cf		CNAME	20aaced6-9249-4856-9722-f31af11336a8.cfargotunnel.com.
+$ORIGIN ingress-cf.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=crd/networking/cloudflared"
+$ORIGIN skylab.fi.
+join			A	192.168.10.3
+$ORIGIN join.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/wizarr-int"
+$ORIGIN skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/comms/matrix-synapse-int"
+kromgo			A	192.168.10.3
+$ORIGIN kromgo.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/monitoring/kromgo-int"
+$ORIGIN skylab.fi.
+ledger			A	192.168.10.3
+$ORIGIN ledger.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/finance/paisa"
+$ORIGIN skylab.fi.
+links			A	192.168.10.3
+$ORIGIN links.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/collab/littlelink-int"
+$ORIGIN skylab.fi.
+linkward		A	192.168.10.3
+$ORIGIN linkward.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/linkwarden-int"
+$ORIGIN skylab.fi.
+maintainerr		A	192.168.10.3
+$ORIGIN maintainerr.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/maintainerr"
+$ORIGIN skylab.fi.
+matrix			A	192.168.10.3
+$ORIGIN matrix.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/comms/matrix-synapse-int"
+$ORIGIN skylab.fi.
+$TTL 3600	; 1 hour
+nas			A	192.168.2.2
+onepassword-connect	A	172.16.9.11
+$TTL 0	; 0 seconds
+paperless		A	192.168.10.3
+$ORIGIN paperless.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/paperless"
+$ORIGIN skylab.fi.
+pgadmin			A	192.168.10.3
+$ORIGIN pgadmin.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/databases/pgadmin"
+$ORIGIN skylab.fi.
+photos			A	192.168.10.3
+$ORIGIN photos.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/immich-main"
+$ORIGIN skylab.fi.
+phpmyadmin		A	192.168.10.3
+$ORIGIN phpmyadmin.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/databases/phpmyadmin"
+$ORIGIN skylab.fi.
+$TTL 3600	; 1 hour
+printer			A	10.0.50.18
+$TTL 0	; 0 seconds
+prom			A	192.168.10.3
+$ORIGIN prom.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/monitoring/prom-prometheus"
+$ORIGIN skylab.fi.
+protu-staging		A	192.168.10.3
+$ORIGIN protu-staging.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/protu/protu-staging-wp-main"
+$ORIGIN skylab.fi.
+prowlarr		A	192.168.10.3
+$ORIGIN prowlarr.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/prowlarr-internal"
+$ORIGIN skylab.fi.
+requests		A	192.168.10.3
+$ORIGIN requests.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/jellyseerr-internal"
+$ORIGIN skylab.fi.
+rook			A	192.168.10.3
+$ORIGIN rook.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/rook-ceph/rook-ceph-dashboard"
+$ORIGIN skylab.fi.
+scrutiny		A	192.168.10.3
+$ORIGIN scrutiny.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/monitoring/scrutiny"
+$ORIGIN skylab.fi.
+sso			CNAME	web-ha.kapsi.fi.
+$ORIGIN sso.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=crd/networking/sso-skylab"
+$ORIGIN skylab.fi.
+syncthing		A	192.168.10.3
+$ORIGIN syncthing.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/syncthing"
+$ORIGIN skylab.fi.
+theme-park		A	192.168.10.3
+$ORIGIN theme-park.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/theme-park-internal"
+$ORIGIN skylab.fi.
+tv			A	192.168.10.3
+$ORIGIN tv.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/media/tvheadend-int"
+$ORIGIN skylab.fi.
+unimus			A	192.168.10.3
+$ORIGIN unimus.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/networking/unimus"
+$ORIGIN skylab.fi.
+who			A	192.168.10.3
+$ORIGIN who.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/networking/whoami-int"
+$ORIGIN skylab.fi.
+z			A	192.168.10.3
+$ORIGIN z.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/default/zipline-internal"
+$ORIGIN skylab.fi.
+z2m			A	192.168.10.3
+$ORIGIN z2m.skylab.fi.
+k8s-nebula		TXT	"heritage=external-dns,external-dns/owner=default,external-dns/resource=ingress/home/zigbee2mqtt"
