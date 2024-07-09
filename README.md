@@ -1,6 +1,7 @@
 # home-service
 
-My home service stack running on a [Beelink EQ12](https://www.bee-link.com/eq12-n100-clone-1) with [Fedora IoT](https://fedoraproject.org/iot/). Applications are run as [podman](https://github.com/containers/podman) containers and managed by systemd to support my home infrastructure.
+Archived as I cannot be assed to fix my IPv6 routing issues from the Fedora IoT vm on my Firewall.
+
 
 ## Core components
 
